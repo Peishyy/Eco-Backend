@@ -63,7 +63,7 @@ def redirect_to_login():
 # Verify user authentication
 def authenticate_user():
     query_params = st.query_params
-    id_token = query_params.get("token", [None])[0]
+    id_token = query_params.get("token", [None])
 
     if not id_token:
         redirect_to_login()
